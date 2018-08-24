@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>demo</title>
+  <script src="./excelUtil.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+    var data = [
+      {
+        a:"123",
+        b:"234"
+      },
+      {
+        a:"123",
+        b:"234"
+      },
+      {
+        a:"123",
+        b:"234"
+      },
+      {
+        a:"123",
+        b:"234"
+      }
+    ]
+    //传入参数有4个,
+    // 第一个是文件名
+    // 第二个是数据数组
+    // 第三个是最后一列匹配换行的key，不传则默认是数组的最后一个key
+    // 第四个是表格的标题字段名，不传则默认为数组的keys
+    outputExcel("demo.csv",data,"b",["第一列","第二列"]);
+  </script>
+</body>
+</html>

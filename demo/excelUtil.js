@@ -16,13 +16,19 @@ function outputExcel(filename, datas, reg, colfield)  {
 				dataStr += colfield.join(',')+",\r\n";
 			}else{
 				for (var key in item) {
-					if (key === regs) dataStr += key+",\r\n";
+					if (key === regs){
+						dataStr += key+",\r\n";
+						break;
+					}
 					else dataStr += key+",";
 				}
 			}
 		}
 		for (var key in item) {
-			if (key === regs) dataStr += item[key]+",\r\n";
+			if (key === regs){
+				dataStr += item[key]+",\r\n";
+				break;
+			}
 			else dataStr += item[key]+",";
 		}
 	}
